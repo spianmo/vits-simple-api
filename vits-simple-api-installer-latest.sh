@@ -282,7 +282,7 @@ if [ "$choice_download_vits_chinese" -eq 1 ]; then
   EXPECTED_MD5="dea78034433141adc8002404aa1b3184"
   FILE_PATH="data/bert/prosody_model/prosody_model.pt"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
@@ -304,7 +304,7 @@ if [ "$choice_download_bert_vits2_1" -eq 1 ]; then
   EXPECTED_MD5="15d7435868fef1bd4222ff7820149a2a"
   FILE_PATH="data/bert/chinese-roberta-wwm-ext-large/pytorch_model.bin"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
@@ -325,7 +325,7 @@ if [ "$choice_download_bert_vits2_2" -eq 1 ]; then
   EXPECTED_MD5="6d0f8f3503dae04df0711b6175ef0c8e"
   FILE_PATH="data/bert/bert-base-japanese-v3/pytorch_model.bin"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
@@ -347,7 +347,7 @@ if [ "$choice_download_bert_vits2_4" -eq 1 ]; then
   EXPECTED_MD5="1AAB4BC5DA8B5354315378439AC5BFA7"
   FILE_PATH="data/bert/deberta-v2-large-japanese/pytorch_model.bin"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
@@ -369,7 +369,7 @@ if [ "$choice_download_bert_vits2_5" -eq 1 ]; then
   EXPECTED_MD5="917265658911F15661869FC4C06BB23C"
   FILE_PATH="data/bert/deberta-v3-large/pytorch_model.bin"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
@@ -383,7 +383,7 @@ if [ "$choice_download_bert_vits2_5" -eq 1 ]; then
   EXPECTED_MD5="1613FCBF3B82999C187B09C9DB79B568"
   FILE_PATH="data/bert/deberta-v3-large/spm.model"
   echo -e "${MESSAGES["VERIFYING"]}$FILE_PATH"
-  ACTUAL_MD5=$(md5sum $FILE_PATH | awk '{print $1}')
+  ACTUAL_MD5=$(md5 -r $FILE_PATH | awk '{print $1}')
 
   if [ "$EXPECTED_MD5" == "$ACTUAL_MD5" ]; then
     echo "${MESSAGES["DOWNLOADED"]}"
